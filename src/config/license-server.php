@@ -81,4 +81,22 @@ return [
          */
         'license_checked' => App\Listeners\LicenseCheckedListener::class,
     ],
+
+    /**
+     * Custom controllers for License Server
+     */
+    'controllers' => [
+        /**
+         * License validation controller
+         *
+         * You can use this controller to handle license validating
+         *
+         * See the documentation for more information.
+         *
+         */
+        'license_validation' => [
+            App\Http\Controllers\LicenseController::class,
+            'licenseValidate'
+        ]
+    ]
 ];
