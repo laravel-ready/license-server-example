@@ -64,7 +64,21 @@ return [
         'auth:sanctum',
         'throttle:api',
     ],
-    'listeners' => [
-        'license_checked' => App\Listeners\LicenseCheckedListener::class
-    ]
+
+    /**
+     * Event listeners for License Server
+     */
+    'event_listeners' => [
+        /**
+         * License checked event listener
+         *
+         * You can use this event to do something when a license is checked.
+         * Also you can handle custom data with this listener.
+         *
+         * See the documentation for more information.
+         *
+         * Default: null
+         */
+        'license_checked' => App\Listeners\LicenseCheckedListener::class,
+    ],
 ];
