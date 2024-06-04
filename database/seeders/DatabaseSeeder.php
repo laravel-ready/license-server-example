@@ -4,8 +4,6 @@ namespace Database\Seeders;
 
 use Illuminate\Database\Seeder;
 
-use LaravelReady\LicenseServer\Database\Factories\LicenseFactory;
-
 class DatabaseSeeder extends Seeder
 {
     /**
@@ -18,6 +16,7 @@ class DatabaseSeeder extends Seeder
         $this->call([
             UserSeeder::class,
             ProductSeeder::class,
+            LicenseSeeder::class,
         ]);
     }
 }
